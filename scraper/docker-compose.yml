@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+  tor-browser:
+    image: dperson/torproxy
+    container_name: tmscraper-torb
+    ports:
+      - '8118:8118'
+      - '9052:9052'
+    networks:
+      - webappnetwork
+  web:
+    container_name: scraper-serverTM
+    build: .
+    depends_on:
+      - tmscraper-torb
+    networks:
+      - webappnetwork
+networks:
+  webappnetwork:
+    driver: bridge

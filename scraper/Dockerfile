@@ -17,6 +17,6 @@ RUN npm run build
 
 WORKDIR /app
 
-ENV MONGO_URI="mongodb+srv://KorenBE:kakiSticks@threatenme.afkmv.mongodb.net/ThreatenMe?retryWrites=true&w=majority"
+ENV MONGO_URI="mongodb+srv://KorenBE:FuckDBPasswords@threatenme.afkmv.mongodb.net/ThreatenMe?retryWrites=true&w=majority"
 
 CMD ["npm","start"]

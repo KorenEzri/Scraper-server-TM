@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node website_scrapers",
+    "build": "tsc --project ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
