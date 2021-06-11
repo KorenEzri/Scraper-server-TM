@@ -45,7 +45,7 @@ const parseInnerText = (text: string, source: string) => {
     const splat = text.split('\n');
     if (splat.length < 3) return;
     const filtered = splat.filter(line => !rules.ignore.includes(line));
-    const parsedData = filtered.map((line: string, index: number) => {
+    const parsedData = filtered.map(() => {
       if (filtered && filtered[0])
         return {
           source: source,
