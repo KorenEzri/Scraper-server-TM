@@ -2,4 +2,7 @@ import { scrapeDeeppaste } from './scrapeDeeppaste';
 import { scrapeStronghold } from './scrapeStronghold';
 
 // scrapeDeeppaste();
-scrapeStronghold();
+
+setInterval(() => {
+  scrapeStronghold();
+}, 150000);

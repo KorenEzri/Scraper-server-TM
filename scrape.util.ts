@@ -7,12 +7,9 @@ export const startBrowser = async (
   let browser;
   const defaultProxyUrl = '9052';
   const runWithProxy = [
-    `--proxy-server=socks5://host.docker.internal:${
-      proxyUrl || defaultProxyUrl
-    }`,
+    `--proxy-server=socks5://127.0.0.1:${proxyUrl || defaultProxyUrl}`,
     '--disable-setuid-sandbox',
     '--no-sandbox',
-    '--link webappnetwork:webappnetwork',
   ];
   let args: string[] = [];
   if (withProxy) args = args.concat(runWithProxy);
